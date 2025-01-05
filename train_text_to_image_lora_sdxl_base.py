@@ -1061,7 +1061,8 @@ def main(args):
             generator = torch.Generator(device=accelerator.device).manual_seed(args.seed * (1 + ambient_utils.dist.get_rank())) if args.seed else None
 
             #with torch.cuda.amp.autocast():
-            with torch.amp.autocast('cuda'):
+            #with torch.amp.autocast('cuda'):
+            with torch.amp.autocast(device_type=pipe.device.type):
                 os.makedirs(os.path.join(args.output_dir, "validation_images"), exist_ok=True)
                 os.makedirs(os.path.join(args.output_dir, "validation_images", str(global_step)), exist_ok=True)
                 if distributed:
@@ -1544,8 +1545,9 @@ def main(args):
                 # generate images for validation
                 if (global_step % args.validation_step_num == 0 or global_step < 64) and args.track_val:
                     if accelerator.is_main_process and args.validation_prompt is not None:
-                        logger.info(f"\n \tRunning validation at step {global_step}...")
+                        logger.info(f"\n\n \tRunning validation at step {global_step}...")
                         # create pipeline
+                    """    
                     pipeline = StableDiffusionXLPipeline.from_pretrained(
                         args.pretrained_model_name_or_path,
                         vae=vae,
@@ -1556,6 +1558,7 @@ def main(args):
                         variant=args.variant,
                         torch_dtype=weight_dtype,
                     )
+                    """
                     # Load the pipeline with explicit configuration settings
                     pipeline = StableDiffusionXLPipeline.from_pretrained(
                         args.pretrained_model_name_or_path,
@@ -1571,10 +1574,10 @@ def main(args):
                     pipeline = pipeline.to(accelerator.device)
                     pipeline.set_progress_bar_config(disable=True)
                     with torch.no_grad():
-                        accelerator.print("Generating images, early stopped.")
-                        gen_images(pipeline, pipe_stop_index, log_under="validation_early_stopped", distributed=False)
-                        #accelerator.print("Generating images, full.")
-                        #gen_images(pipeline, None, log_under="validation_full", distributed=False)
+                        #accelerator.print("Generating images, early stopped.")
+                        #gen_images(pipeline, pipe_stop_index, log_under="validation_early_stopped", distributed=False)
+                        accelerator.print("Generating images, full.")
+                        gen_images(pipeline, None, log_under="validation_full", distributed=False)
             
 
                     del pipeline

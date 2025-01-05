@@ -1,0 +1,42 @@
+01/05/2025 15:16:03 - INFO - __main__ - ***** Running training *****
+01/05/2025 15:16:03 - INFO - __main__ -   Num examples = 128
+01/05/2025 15:16:03 - INFO - __main__ -   Num Epochs = 8
+01/05/2025 15:16:03 - INFO - __main__ -   Instantaneous batch size per device = 1
+01/05/2025 15:16:03 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 1
+01/05/2025 15:16:03 - INFO - __main__ -   Gradient Accumulation steps = 1
+01/05/2025 15:16:03 - INFO - __main__ -   Total optimization steps = 1024
+Steps:   0%|▏                                                                                                                                                                                                                                                | 1/1024 [00:23<6:39:21, 23.42s/it]01/05/2025 15:16:26 - INFO - __main__ -
+ 	Running validation at step 1...
+{'image_encoder', 'feature_extractor'} was not found in config. Values will be initialized to default values.
+                                                                                                                                                                                                                                                                                                Loaded tokenizer_2 as CLIPTokenizer from `tokenizer_2` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+{'use_exponential_sigmas', 'timestep_type', 'final_sigmas_type', 'rescale_betas_zero_snr', 'sigma_max', 'sigma_min', 'use_beta_sigmas'} was not found in config. Values will be initialized to default values.                                                            | 0/7 [00:00<?, ?it/s]
+Loaded scheduler as EulerDiscreteScheduler from `scheduler` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loaded tokenizer as CLIPTokenizer from `tokenizer` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loading pipeline components...: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 87.91it/s]
+{'image_encoder', 'feature_extractor'} was not found in config. Values will be initialized to default values.
+                                                                                                                                                                                                                                                                                                Loaded tokenizer_2 as CLIPTokenizer from `tokenizer_2` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+{'use_exponential_sigmas', 'timestep_type', 'final_sigmas_type', 'rescale_betas_zero_snr', 'sigma_max', 'sigma_min', 'use_beta_sigmas'} was not found in config. Values will be initialized to default values.                                                            | 0/7 [00:00<?, ?it/s]
+Loaded scheduler as EulerDiscreteScheduler from `scheduler` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loaded tokenizer as CLIPTokenizer from `tokenizer` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loading pipeline components...: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 85.57it/s]
+Generating images, early stopped.
+/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/amp/autocast_mode.py:266: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py", line 1666, in <module>
+    main(args)
+  File "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py", line 1575, in main
+    gen_images(pipeline, pipe_stop_index, log_under="validation_early_stopped", distributed=False)
+  File "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py", line 1082, in gen_images
+    image_tensor = ambient_utils.diffusers_utils.sample_with_early_stop(pipe, denoising_end, **pipe_kwargs)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/ambient_utils/diffusers_utils.py", line 242, in sample_with_early_stop
+    clean = run_unet(pipe, noisy_latents, torch.tensor([final_timestep], device=pipe.device), captions=prompts, return_noise=False)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/ambient_utils/diffusers_utils.py", line 223, in run_unet
+    add_time_ids = torch.cat([compute_time_ids((resolution, resolution), (0, 0)) for _ in range(noisy_latent.shape[0])])
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/ambient_utils/diffusers_utils.py", line 223, in <listcomp>
+    add_time_ids = torch.cat([compute_time_ids((resolution, resolution), (0, 0)) for _ in range(noisy_latent.shape[0])])
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/ambient_utils/diffusers_utils.py", line 139, in compute_time_ids
+    add_time_ids = add_time_ids.to(device, dtype=weight_dtype)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/cuda/__init__.py", line 310, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled

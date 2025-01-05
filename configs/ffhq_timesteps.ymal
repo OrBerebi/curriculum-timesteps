@@ -1,18 +1,15 @@
-expr_id: train_ffhq_fid_timesteps
+expr_id: train_ffhq_curriculum_timesteps
 
-# validation and FID tracking relevent for train v3
 validation_step_num: 8
 FID_step_num: 32
 track_val: False
-track_fid: True
+track_fid: False
 
 # output_folder
-output_dir: "$BASE_PATH/ffhq_fid_timesteps/"
+output_dir: "$BASE_PATH/ffhq_curriculum_timesteps/"
 
 # general params
-#pretrained_model_name_or_path: stabilityai/stable-diffusion-2-base
 pretrained_model_name_or_path: stabilityai/stable-diffusion-xl-base-1.0
-#pretrained_model_name_or_path: stabilityai/stable-diffusion-2-1
 pretrained_vae_model_name_or_path: madebyollin/sdxl-vae-fp16-fix
 caption_column: text   
 resolution: 1024 

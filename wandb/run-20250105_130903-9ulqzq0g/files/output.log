@@ -1,0 +1,51 @@
+01/05/2025 13:09:04 - INFO - __main__ - ***** Running training *****
+01/05/2025 13:09:04 - INFO - __main__ -   Num examples = 128
+01/05/2025 13:09:04 - INFO - __main__ -   Num Epochs = 8
+01/05/2025 13:09:04 - INFO - __main__ -   Instantaneous batch size per device = 1
+01/05/2025 13:09:04 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 1
+01/05/2025 13:09:04 - INFO - __main__ -   Gradient Accumulation steps = 1
+01/05/2025 13:09:04 - INFO - __main__ -   Total optimization steps = 1024
+Steps:  49%|███████████████████████████████████████████████████████████████████████████████████████████████▋                                                                                                    | 500/1024 [26:45<26:42,  3.06s/it, lr=0.0001, step_loss=0.192]01/05/2025 13:35:50 - INFO - accelerate.accelerator - Saving current state to /Users/orberebi/Documents/GitHub/curriculum-timesteps//ffhq_base/checkpoint-500
+Model weights saved in /Users/orberebi/Documents/GitHub/curriculum-timesteps/ffhq_base/checkpoint-500/pytorch_lora_weights.safetensors
+01/05/2025 13:35:50 - INFO - accelerate.checkpointing - Optimizer state saved in /Users/orberebi/Documents/GitHub/curriculum-timesteps/ffhq_base/checkpoint-500/optimizer.bin
+01/05/2025 13:35:50 - INFO - accelerate.checkpointing - Scheduler state saved in /Users/orberebi/Documents/GitHub/curriculum-timesteps/ffhq_base/checkpoint-500/scheduler.bin
+01/05/2025 13:35:50 - INFO - accelerate.checkpointing - Sampler state for dataloader 0 saved in /Users/orberebi/Documents/GitHub/curriculum-timesteps/ffhq_base/checkpoint-500/sampler.bin
+01/05/2025 13:35:50 - INFO - accelerate.checkpointing - Random states saved in /Users/orberebi/Documents/GitHub/curriculum-timesteps/ffhq_base/checkpoint-500/random_states_0.pkl
+01/05/2025 13:35:50 - INFO - __main__ - Saved state to /Users/orberebi/Documents/GitHub/curriculum-timesteps//ffhq_base/checkpoint-500
+Steps:  98%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍    | 1000/1024 [52:10<01:12,  3.03s/it, lr=0.0001, step_loss=0.203]01/05/2025 14:01:14 - INFO - accelerate.accelerator - Saving current state to /Users/orberebi/Documents/GitHub/curriculum-timesteps//ffhq_base/checkpoint-1000
+Model weights saved in /Users/orberebi/Documents/GitHub/curriculum-timesteps/ffhq_base/checkpoint-1000/pytorch_lora_weights.safetensors
+01/05/2025 14:01:15 - INFO - accelerate.checkpointing - Optimizer state saved in /Users/orberebi/Documents/GitHub/curriculum-timesteps/ffhq_base/checkpoint-1000/optimizer.bin
+01/05/2025 14:01:15 - INFO - accelerate.checkpointing - Scheduler state saved in /Users/orberebi/Documents/GitHub/curriculum-timesteps/ffhq_base/checkpoint-1000/scheduler.bin
+01/05/2025 14:01:15 - INFO - accelerate.checkpointing - Sampler state for dataloader 0 saved in /Users/orberebi/Documents/GitHub/curriculum-timesteps/ffhq_base/checkpoint-1000/sampler.bin
+01/05/2025 14:01:15 - INFO - accelerate.checkpointing - Random states saved in /Users/orberebi/Documents/GitHub/curriculum-timesteps/ffhq_base/checkpoint-1000/random_states_0.pkl
+01/05/2025 14:01:15 - INFO - __main__ - Saved state to /Users/orberebi/Documents/GitHub/curriculum-timesteps//ffhq_base/checkpoint-1000
+Steps: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1024/1024 [53:24<00:00,  3.02s/it, lr=0.0001, step_loss=0.0209]Model weights saved in /Users/orberebi/Documents/GitHub/curriculum-timesteps/ffhq_base/pytorch_lora_weights.safetensors
+Running with pre-trained pipeline...
+model_index.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 609/609 [00:00<00:00, 467kB/s]
+diffusion_pytorch_model.safetensors: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 335M/335M [00:22<00:00, 14.9MB/s]
+Fetching 13 files: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:22<00:00,  1.77s/it]
+{'feature_extractor', 'image_encoder'} was not found in config. Values will be initialized to default values.██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:22<00:00,  1.77s/it]
+                                                                                                                                                                                                                                                                               Loaded tokenizer as CLIPTokenizer from `tokenizer` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loaded tokenizer_2 as CLIPTokenizer from `tokenizer_2` subfolder of stabilityai/stable-diffusion-xl-base-1.0.                                                                                                                                            | 0/7 [00:00<?, ?it/s]
+{'dropout', 'attention_type', 'reverse_transformer_layers_per_block'} was not found in config. Values will be initialized to default values.
+Loaded unet as UNet2DConditionModel from `unet` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+                                                                                                                                                                                                                                                                               {'timestep_type', 'use_beta_sigmas', 'sigma_max', 'sigma_min', 'use_exponential_sigmas', 'rescale_betas_zero_snr', 'final_sigmas_type'} was not found in config. Values will be initialized to default values.
+Loaded scheduler as EulerDiscreteScheduler from `scheduler` subfolder of stabilityai/stable-diffusion-xl-base-1.0.████████████████████████████████████████████████████████████████████▋                                                          | 5/7 [00:00<00:00, 11.03it/s]
+Loading pipeline components...: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 15.38it/s]
+/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/amp/autocast_mode.py:266: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 24/24 [01:11<00:00,  2.99s/it]
+Traceback (most recent call last):████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 24/24 [01:11<00:00,  2.64s/it]
+  File "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py", line 1666, in <module>
+    main(args)
+  File "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py", line 1646, in main
+    gen_images(pipeline, pipe_stop_index, log_under="test_no_lora_early_stopped")
+  File "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py", line 1082, in gen_images
+    image_tensor = ambient_utils.diffusers_utils.sample_with_early_stop(pipe, denoising_end, **pipe_kwargs)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/ambient_utils/diffusers_utils.py", line 242, in sample_with_early_stop
+    clean = run_unet(pipe, noisy_latents, torch.tensor([final_timestep], device=pipe.device), captions=prompts, return_noise=False)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/ambient_utils/diffusers_utils.py", line 220, in run_unet
+    prompt_embeds = encoded_prompt["prompt_embeds"].cuda()
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/cuda/__init__.py", line 310, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled

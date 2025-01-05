@@ -1,0 +1,16 @@
+{"time":"2025-01-05T13:04:10.966581+02:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-05T13:04:10.966614+02:00","level":"INFO","msg":"created symlink","path":"/Users/orberebi/Documents/GitHub/curriculum-timesteps/wandb/run-20250105_130410-hicbr9f4/logs/debug-core.log"}
+{"time":"2025-01-05T13:04:11.483014+02:00","level":"INFO","msg":"created new stream","id":"hicbr9f4"}
+{"time":"2025-01-05T13:04:11.483057+02:00","level":"INFO","msg":"stream: started","id":"hicbr9f4"}
+{"time":"2025-01-05T13:04:11.48313+02:00","level":"INFO","msg":"handler: started","stream_id":"hicbr9f4"}
+{"time":"2025-01-05T13:04:11.483155+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"hicbr9f4"}
+{"time":"2025-01-05T13:04:11.483153+02:00","level":"INFO","msg":"sender: started","stream_id":"hicbr9f4"}
+{"time":"2025-01-05T13:04:11.980664+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-05T13:06:46.61145+02:00","level":"INFO","msg":"stream: closing","id":"hicbr9f4"}
+{"time":"2025-01-05T13:06:46.611481+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-05T13:06:46.61194+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-05T13:06:47.433453+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-05T13:06:47.816679+02:00","level":"INFO","msg":"handler: closed","stream_id":"hicbr9f4"}
+{"time":"2025-01-05T13:06:47.816707+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hicbr9f4"}
+{"time":"2025-01-05T13:06:47.81673+02:00","level":"INFO","msg":"sender: closed","stream_id":"hicbr9f4"}
+{"time":"2025-01-05T13:06:47.817185+02:00","level":"INFO","msg":"stream: closed","id":"hicbr9f4"}

@@ -1,0 +1,17 @@
+{"time":"2025-01-05T15:24:35.820276+02:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-05T15:24:35.820308+02:00","level":"INFO","msg":"created symlink","path":"/Users/orberebi/Documents/GitHub/curriculum-timesteps/wandb/run-20250105_152435-iarlngma/logs/debug-core.log"}
+{"time":"2025-01-05T15:24:35.935256+02:00","level":"INFO","msg":"created new stream","id":"iarlngma"}
+{"time":"2025-01-05T15:24:35.935301+02:00","level":"INFO","msg":"stream: started","id":"iarlngma"}
+{"time":"2025-01-05T15:24:35.935317+02:00","level":"INFO","msg":"handler: started","stream_id":"iarlngma"}
+{"time":"2025-01-05T15:24:35.935327+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"iarlngma"}
+{"time":"2025-01-05T15:24:35.935331+02:00","level":"INFO","msg":"sender: started","stream_id":"iarlngma"}
+{"time":"2025-01-05T15:24:36.258985+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-05T15:30:33.45364+02:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":2}
+{"time":"2025-01-05T15:31:48.916291+02:00","level":"INFO","msg":"stream: closing","id":"iarlngma"}
+{"time":"2025-01-05T15:31:48.916341+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-05T15:31:48.917396+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-05T15:31:49.875534+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-05T15:31:50.127582+02:00","level":"INFO","msg":"handler: closed","stream_id":"iarlngma"}
+{"time":"2025-01-05T15:31:50.127624+02:00","level":"INFO","msg":"sender: closed","stream_id":"iarlngma"}
+{"time":"2025-01-05T15:31:50.127616+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"iarlngma"}
+{"time":"2025-01-05T15:31:50.128113+02:00","level":"INFO","msg":"stream: closed","id":"iarlngma"}

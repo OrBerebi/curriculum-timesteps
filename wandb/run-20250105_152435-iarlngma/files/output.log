@@ -1,0 +1,74 @@
+01/05/2025 15:24:36 - INFO - __main__ - ***** Running training *****
+01/05/2025 15:24:36 - INFO - __main__ -   Num examples = 128
+01/05/2025 15:24:36 - INFO - __main__ -   Num Epochs = 8
+01/05/2025 15:24:36 - INFO - __main__ -   Instantaneous batch size per device = 1
+01/05/2025 15:24:36 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 1
+01/05/2025 15:24:36 - INFO - __main__ -   Gradient Accumulation steps = 1
+01/05/2025 15:24:36 - INFO - __main__ -   Total optimization steps = 1024
+Steps:   0%|▏                                                                                                                                                                                                                                                | 1/1024 [00:08<2:21:31,  8.30s/it]01/05/2025 15:24:44 - INFO - __main__ -
+ 	Running validation at step 1...
+{'feature_extractor', 'image_encoder'} was not found in config. Values will be initialized to default values.
+                                                                                                                                                                                                                                                                                                {'timestep_type', 'final_sigmas_type', 'sigma_min', 'sigma_max', 'use_exponential_sigmas', 'use_beta_sigmas', 'rescale_betas_zero_snr'} was not found in config. Values will be initialized to default values.
+Loaded scheduler as EulerDiscreteScheduler from `scheduler` subfolder of stabilityai/stable-diffusion-xl-base-1.0.                                                                                                                                                        | 0/7 [00:00<?, ?it/s]
+Loaded tokenizer_2 as CLIPTokenizer from `tokenizer_2` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loaded tokenizer as CLIPTokenizer from `tokenizer` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loading pipeline components...: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 77.49it/s]
+{'feature_extractor', 'image_encoder'} was not found in config. Values will be initialized to default values.
+                                                                                                                                                                                                                                                                                                {'timestep_type', 'final_sigmas_type', 'sigma_min', 'sigma_max', 'use_exponential_sigmas', 'use_beta_sigmas', 'rescale_betas_zero_snr'} was not found in config. Values will be initialized to default values.
+Loaded scheduler as EulerDiscreteScheduler from `scheduler` subfolder of stabilityai/stable-diffusion-xl-base-1.0.                                                                                                                                                        | 0/7 [00:00<?, ?it/s]
+Loaded tokenizer_2 as CLIPTokenizer from `tokenizer_2` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loaded tokenizer as CLIPTokenizer from `tokenizer` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loading pipeline components...: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 87.88it/s]
+Generating images, early stopped.
+Decoding images...
+Finished decoding...
+Steps:   0%|▏                                                                                                                                                                                                                   | 1/1024 [05:57<2:21:31,  8.30s/it, lr=0.0001, step_loss=0.0423][34m[1mwandb[0m: [33mWARNING[0m Tried to log to step 1 that is less than the current step 2. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+Steps:   0%|▍                                                                                                                                                                                                                 | 2/1024 [06:38<66:08:47, 233.00s/it, lr=0.0001, step_loss=0.0423]01/05/2025 15:31:14 - INFO - __main__ -
+ 	Running validation at step 2...
+{'feature_extractor', 'image_encoder'} was not found in config. Values will be initialized to default values.
+                                                                                                                                                                                                                                                                                                {'timestep_type', 'final_sigmas_type', 'sigma_min', 'sigma_max', 'use_exponential_sigmas', 'use_beta_sigmas', 'rescale_betas_zero_snr'} was not found in config. Values will be initialized to default values.
+Loaded scheduler as EulerDiscreteScheduler from `scheduler` subfolder of stabilityai/stable-diffusion-xl-base-1.0.                                                                                                                                                        | 0/7 [00:00<?, ?it/s]
+Loaded tokenizer_2 as CLIPTokenizer from `tokenizer_2` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loaded tokenizer as CLIPTokenizer from `tokenizer` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loading pipeline components...: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 78.69it/s]
+{'feature_extractor', 'image_encoder'} was not found in config. Values will be initialized to default values.
+                                                                                                                                                                                                                                                                                                {'timestep_type', 'final_sigmas_type', 'sigma_min', 'sigma_max', 'use_exponential_sigmas', 'use_beta_sigmas', 'rescale_betas_zero_snr'} was not found in config. Values will be initialized to default values.
+Loaded scheduler as EulerDiscreteScheduler from `scheduler` subfolder of stabilityai/stable-diffusion-xl-base-1.0.                                                                                                                                                        | 0/7 [00:00<?, ?it/s]
+Loaded tokenizer_2 as CLIPTokenizer from `tokenizer_2` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loaded tokenizer as CLIPTokenizer from `tokenizer` subfolder of stabilityai/stable-diffusion-xl-base-1.0.
+Loading pipeline components...: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 80.68it/s]
+Generating images, early stopped.
+Traceback (most recent call last):
+  File "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py", line 1667, in <module>
+    main(args)
+  File "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py", line 1576, in main
+    gen_images(pipeline, pipe_stop_index, log_under="validation_early_stopped", distributed=False)
+  File "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py", line 1083, in gen_images
+    image_tensor = ambient_utils.diffusers_utils.sample_with_early_stop(pipe, denoising_end, **pipe_kwargs)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/ambient_utils/diffusers_utils.py", line 234, in sample_with_early_stop
+    noisy_latents = pipe(prompts, **pipe_kwargs, denoising_end=denoising_end, num_inference_steps=num_inference_steps, output_type="latent").images
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/diffusers/pipelines/stable_diffusion_xl/pipeline_stable_diffusion_xl.py", line 1208, in __call__
+    noise_pred = self.unet(
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/diffusers/models/unets/unet_2d_condition.py", line 1281, in forward
+    sample = upsample_block(
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/diffusers/models/unets/unet_2d_blocks.py", line 2629, in forward
+    hidden_states = upsampler(hidden_states, upsample_size)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/diffusers/models/upsampling.py", line 177, in forward
+    hidden_states = F.interpolate(hidden_states, scale_factor=2.0, mode="nearest")
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/nn/functional.py", line 4536, in interpolate
+    return torch._C._nn.upsample_nearest2d(input, output_size, scale_factors)
+KeyboardInterrupt

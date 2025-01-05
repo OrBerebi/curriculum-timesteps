@@ -1,0 +1,47 @@
+{
+  "os": "macOS-15.2-arm64-i386-64bit",
+  "python": "CPython 3.9.21",
+  "startedAt": "2025-01-05T13:20:49.215261Z",
+  "args": [
+    "--config=/Users/orberebi/Documents/GitHub/curriculum-timesteps/configs/ffhq_base.ymal"
+  ],
+  "program": "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py",
+  "codePath": "train_text_to_image_lora_sdxl_base.py",
+  "git": {
+    "remote": "https://github.com/OrBerebi/curriculum-timesteps.git",
+    "commit": "022241d314583ed1f62a3458bc8b84860bbd0e08"
+  },
+  "email": "berebio@post.bgu.ac.il",
+  "root": "/Users/orberebi/Documents/GitHub/curriculum-timesteps",
+  "host": "Ors-MacBook-Pro-14.local",
+  "executable": "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/bin/python",
+  "codePathLocal": "train_text_to_image_lora_sdxl_base.py",
+  "cpu_count": 12,
+  "cpu_count_logical": 12,
+  "disk": {
+    "/": {
+      "total": "994662584320",
+      "used": "575724523520"
+    },
+    "/System/Volumes/Data": {
+      "total": "994662584320",
+      "used": "575724523520"
+    }
+  },
+  "memory": {
+    "total": "68719476736"
+  },
+  "cpu": {
+    "count": 12,
+    "countLogical": 12
+  },
+  "apple": {
+    "name": "Unknown",
+    "ecpuCores": 4,
+    "pcpuCores": 8,
+    "gpuCores": 38,
+    "memoryGb": 64,
+    "swapTotalBytes": "3221225472",
+    "ramTotalBytes": "68719476736"
+  }
+}

@@ -1,0 +1,178 @@
+_wandb:
+    value:
+        cli_version: 0.19.1
+        m: []
+        python_version: 3.9.21
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 55
+                - 71
+                - 83
+                - 98
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 55
+                - 71
+                - 83
+                - 98
+            "3":
+                - 13
+                - 23
+                - 55
+                - 61
+            "4": 3.9.21
+            "5": 0.19.1
+            "6": 4.47.1
+            "8":
+                - 5
+            "12": 0.19.1
+            "13": darwin-arm64
+FID_step_num:
+    value: 32
+adam_beta1:
+    value: 0.9
+adam_beta2:
+    value: 0.999
+adam_epsilon:
+    value: 1e-08
+adam_weight_decay:
+    value: 0.01
+allow_tf32:
+    value: false
+cache_dir:
+    value: null
+caption_column:
+    value: text
+center_crop:
+    value: false
+checkpointing_steps:
+    value: 500
+checkpoints_total_limit:
+    value: null
+config_file:
+    value: /Users/orberebi/Documents/GitHub/curriculum-timesteps/configs/ffhq_base.ymal
+consistency_coeff:
+    value: 0
+dataloader_num_workers:
+    value: 0
+dataset_config_name:
+    value: null
+dataset_name:
+    value: null
+enable_xformers_memory_efficient_attention:
+    value: false
+eval_batch_size:
+    value: 1
+expr_id:
+    value: train_ffhq_base
+fid_ref_path:
+    value: $FFHQ_1024_REF_PATH
+gradient_accumulation_steps:
+    value: 1
+gradient_checkpointing:
+    value: false
+hub_model_id:
+    value: null
+image_column:
+    value: image
+learning_rate:
+    value: 0.0001
+local_rank:
+    value: -1
+logging_dir:
+    value: logs
+lr_scheduler:
+    value: constant
+lr_warmup_steps:
+    value: 0
+max_grad_norm:
+    value: 1
+max_steps_diff:
+    value: 100
+max_train_samples:
+    value: 128
+max_train_steps:
+    value: 1024
+min_validation_steps:
+    value: 50
+mixed_precision:
+    value: "no"
+noise_offset:
+    value: 0
+noisy_ambient:
+    value: true
+num_consistency_steps:
+    value: 1
+num_images_for_fid:
+    value: 128
+num_train_epochs:
+    value: 8
+num_validation_images:
+    value: 4
+output_dir:
+    value: /Users/orberebi/Documents/GitHub/curriculum-timesteps//ffhq_base/
+prediction_type:
+    value: null
+pretrained_model_name_or_path:
+    value: stabilityai/stable-diffusion-xl-base-1.0
+pretrained_vae_model_name_or_path:
+    value: madebyollin/sdxl-vae-fp16-fix
+random_flip:
+    value: true
+rank:
+    value: 4
+report_to:
+    value: wandb
+resolution:
+    value: 1024
+resume_from_checkpoint:
+    value: null
+revision:
+    value: null
+run_consistency_everywhere:
+    value: true
+scale_lr:
+    value: false
+seed:
+    value: 42
+skip_first_epoch:
+    value: false
+snr_gamma:
+    value: null
+time_limit:
+    value: 2880
+timestep_nature:
+    value: 40
+track_fid:
+    value: false
+track_val:
+    value: true
+train_batch_size:
+    value: 1
+train_data_dir:
+    value: /Users/orberebi/Documents/GitHub/curriculum-timesteps//datasets/ffhq1024x1024
+train_text_encoder:
+    value: false
+use_8bit_adam:
+    value: false
+validation_epochs:
+    value: 1
+validation_prompt:
+    value: face
+validation_step_num:
+    value: 8
+variant:
+    value: null
+with_grad:
+    value: true
+x0_pred:
+    value: true

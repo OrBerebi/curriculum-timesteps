@@ -1,0 +1,45 @@
+01/05/2025 13:04:12 - INFO - __main__ - ***** Running training *****
+01/05/2025 13:04:12 - INFO - __main__ -   Num examples = 128
+01/05/2025 13:04:12 - INFO - __main__ -   Num Epochs = 8
+01/05/2025 13:04:12 - INFO - __main__ -   Instantaneous batch size per device = 1
+01/05/2025 13:04:12 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 1
+01/05/2025 13:04:12 - INFO - __main__ -   Gradient Accumulation steps = 1
+01/05/2025 13:04:12 - INFO - __main__ -   Total optimization steps = 1024
+Steps:   3%|████▋                                                                                                                                                                     | 28/1024 [02:34<54:01,  3.25s/it, lr=0.0001, step_loss=0.281]Traceback (most recent call last):
+  File "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py", line 1666, in <module>
+    main(args)
+  File "/Users/orberebi/Documents/GitHub/curriculum-timesteps/train_text_to_image_lora_sdxl_base.py", line 1169, in main
+    for step, batch in enumerate(train_dataloader):
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/accelerate/data_loader.py", line 563, in __iter__
+    next_batch = next(dataloader_iter)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 2784, in __getitems__
+    batch = self.__getitem__(keys)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 2780, in __getitem__
+    return self._getitem(key)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 2765, in _getitem
+    formatted_output = format_table(
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/datasets/formatting/formatting.py", line 639, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/datasets/formatting/formatting.py", line 407, in __call__
+    return self.format_batch(pa_table)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/datasets/formatting/formatting.py", line 521, in format_batch
+    batch = self.python_features_decoder.decode_batch(batch)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/datasets/formatting/formatting.py", line 228, in decode_batch
+    return self.features.decode_batch(batch) if self.features else batch
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/datasets/features/features.py", line 2088, in decode_batch
+    [
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/datasets/features/features.py", line 2089, in <listcomp>
+    decode_nested_example(self[column_name], value, token_per_repo_id=token_per_repo_id)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/datasets/features/features.py", line 1404, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/datasets/features/image.py", line 169, in decode_example
+    image = PIL.Image.open(path)
+  File "/Users/orberebi/anaconda3/envs/curriculum-timesteps-env/lib/python3.9/site-packages/PIL/Image.py", line 3465, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/orberebi/Documents/GitHub/curriculum-timesteps/datasets/ffhq1024x1024/00256.png'

@@ -1,24 +1,20 @@
-expr_id: train_ffhq_fid_base
+expr_id: train_ffhq_base
 
-# validation and FID tracking relevent for train v3
 validation_step_num: 8
 FID_step_num: 32
-track_val: False
-track_fid: True
+track_val: True
+track_fid: False
 
 # output_folder
-output_dir: "$BASE_PATH/ffhq_fid_base/"
+output_dir: "$BASE_PATH/ffhq_base/"
 
 # general params
-#pretrained_model_name_or_path: stabilityai/stable-diffusion-2-base
 pretrained_model_name_or_path: stabilityai/stable-diffusion-xl-base-1.0
-#pretrained_model_name_or_path: stabilityai/stable-diffusion-2-1
 pretrained_vae_model_name_or_path: madebyollin/sdxl-vae-fp16-fix
 caption_column: text   
 resolution: 1024 
 random_flip: True   
 checkpointing_steps: 500   
-#train_text_encoder: False
 
 # dataset size
 max_train_samples: 128
@@ -27,7 +23,7 @@ max_train_samples: 128
 learning_rate: 1e-04 
 lr_scheduler: constant 
 lr_warmup_steps: 0   
-mixed_precision: fp16
+mixed_precision: 'no'
 validation_prompt: "face" 
 seed: 42   
 
