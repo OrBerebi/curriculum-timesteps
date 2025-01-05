@@ -1,0 +1,59 @@
+expr_id: train_ffhq_fid_base
+
+# validation and FID tracking relevent for train v3
+validation_step_num: 8
+FID_step_num: 32
+track_val: False
+track_fid: True
+
+# output_folder
+output_dir: "$BASE_PATH/ffhq_fid_base/"
+
+# general params
+#pretrained_model_name_or_path: stabilityai/stable-diffusion-2-base
+pretrained_model_name_or_path: stabilityai/stable-diffusion-xl-base-1.0
+#pretrained_model_name_or_path: stabilityai/stable-diffusion-2-1
+pretrained_vae_model_name_or_path: madebyollin/sdxl-vae-fp16-fix
+caption_column: text   
+resolution: 1024 
+random_flip: True   
+checkpointing_steps: 500   
+#train_text_encoder: False
+
+# dataset size
+max_train_samples: 128
+
+# optimization params
+learning_rate: 1e-04 
+lr_scheduler: constant 
+lr_warmup_steps: 0   
+mixed_precision: fp16
+validation_prompt: "face" 
+seed: 42   
+
+# Dataset params
+train_data_dir: "$FFHQ_RAW_DATA"
+train_batch_size: 1
+num_train_epochs: 8
+gradient_accumulation_steps: 1
+
+# logging
+min_validation_steps: 50
+skip_first_epoch: False
+report_to: wandb
+
+# ambient params
+noisy_ambient: True
+timestep_nature: 40
+x0_pred: True
+
+# consistency params
+consistency_coeff: 0.0
+num_consistency_steps: 1
+max_steps_diff: 100
+run_consistency_everywhere: True
+
+# FID params
+fid_ref_path: "$FFHQ_1024_REF_PATH"
+num_images_for_fid: 128
+

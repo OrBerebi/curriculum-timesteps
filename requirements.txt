@@ -1,0 +1,23 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+numpy<2
+torch
+torchvision
+torchaudio
+gdown
+invisible_watermark
+transformers
+accelerate
+safetensors
+datasets
+peft
+wandb
+imageio
+s3fs
+seaborn
+plotly
+scipy
+opencv-python==4.8.0.74
+webdataset
+git+https://github.com/giannisdaras/ambient_utils.git
+git+https://github.com/huggingface/diffusers.git
+backports.tarfile
